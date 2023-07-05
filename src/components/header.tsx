@@ -101,7 +101,7 @@ const Header: React.FC = (props: HeaderProps) => {
               </NavList>
             </NavMenu>
 
-            <div className="pt-0">
+            <div className="pt-0 p-3">
               <NavSocial
                 href="https://www.instagram.com/chapa.a.c.e/"
                 target="_blank"
