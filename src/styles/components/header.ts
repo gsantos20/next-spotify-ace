@@ -5,6 +5,11 @@ import styled, { createGlobalStyle } from 'styled-components'
 export interface HeaderProps {}
 
 export const GlobalHeaderStyle = createGlobalStyle`
+  /*Aparecer menu*/
+  nav.show {
+    left: 0;
+    width: 100%;
+  }
 `
 
 export const TagHeader = styled.header`
@@ -33,6 +38,7 @@ export const TagHeader = styled.header`
 
 export const Nav = styled.nav`
   width: 100%;
+  height: 100%;
 
   @media screen and (max-width: 768px) {
     position: fixed;
@@ -44,7 +50,8 @@ export const Nav = styled.nav`
     padding: 1.5rem 0;
     z-index: var(--z-fixed);
     -webkit-transition: 0.5s;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
+    overflow: hidden;
     padding-top: 1.5% !important;
   }
 `
@@ -61,6 +68,7 @@ export const NavContent = styled.div`
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    align-items: center;
   }
 
   height: 100%;
@@ -75,14 +83,31 @@ export const NavContent = styled.div`
   grid-template-columns: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  align-content: center;
 
   @media screen and (min-width: 1024px) {
     margin-left: auto;
     margin-right: auto;
   }
 `
+export const NavToggle = styled.button`
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`
+
 export const NavClose = styled.button`
-  @media (min-width: 992px) {
+  font-size: 1.3rem;
+  padding: 0.25rem;
+  background-color: var(--dark-color-alt);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
     display: none !important;
   }
 `
@@ -132,10 +157,15 @@ export const SrcImg = styled.div`
 `
 
 export const NavMenu = styled.div`
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  padding-bottom: 0.5rem;
+  align-self: end;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    align-self: center;
+    padding-bottom: 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+  }
 `
 
 export const NavList = styled.ul`
@@ -144,6 +174,8 @@ export const NavList = styled.ul`
     display: -ms-flexbox;
     display: flex;
     list-style: none;
+    gap: 2.5rem;
+    height: 100%;
   }
 `
 

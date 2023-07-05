@@ -16,6 +16,10 @@ export const TagFooter = styled.footer`
   bottom: 0;
   left: 0;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    height: 4.5rem;
+  }
 `
 
 export const FooterLink = styled.a`

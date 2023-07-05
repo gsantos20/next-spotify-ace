@@ -41,7 +41,7 @@ export default createGlobalStyle`
     font-size: var(--normal-font-size);
     font-weight: 500;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
     background-color: black
