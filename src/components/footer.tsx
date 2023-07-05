@@ -13,10 +13,10 @@ const Footer: React.FC = (props: FooterProps) => {
       <GlobalFooterStyle />
       <TagFooter>
         <div className="row p-2 ds-flex w-100 h-100 justify-content-center align-items-center">
-          <div className="col-md-6 fontMobile p-1 fz-3 text-center">
+          <div className="col-6 fs-7 text-center">
             <b>2023 ACE&copy; PLATFORM - V2</b>
           </div>
-          <div className="col-md-6 fontMobile p-1 fz-3 text-center">
+          <div className="col-6 fs-6 text-center">
             <b>
               DEVELOPED WITH ❤ BY
               <FooterLink href="index">AceTeam</FooterLink>

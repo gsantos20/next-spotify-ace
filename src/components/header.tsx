@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import React from 'react'
+import React, { useState } from 'react'
 import {
   GlobalHeaderStyle,
   HeaderProps,
@@ -15,15 +15,35 @@ import {
   NavSocial,
   IconX,
   NavClose,
-  NavList
+  NavList,
+  NavToggle
 } from '../styles/components/header'
 
 const Header: React.FC = (props: HeaderProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setTimeout(() => {
+      setIsMenuOpen(!isMenuOpen)
+    }, 100)
+  }
+
+  const closeMenu = () => {
+    setTimeout(() => {
+      setIsMenuOpen(false)
+    }, 500)
+  }
+
+  const handleLinkClick = () => {
+    // Remove menu mobile
+    setIsMenuOpen(false)
+  }
+
   return (
     <div>
       <GlobalHeaderStyle />
       <TagHeader>
-        <NavClose
+        <NavToggle
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -31,39 +51,52 @@ const Header: React.FC = (props: HeaderProps) => {
           aria-controls="nav-menuTCC"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={toggleMenu}
         >
-          <i className="bi bi-list"></i>
-        </NavClose>
-        <Nav id="nav-menuTCC">
+          <i className="bi bi-list text-white fs-3"></i>
+        </NavToggle>
+        <Nav id="nav-menuTCC" className={isMenuOpen ? 'show' : ''}>
           <NavContent>
-            <NavClose
-              className="navbar-toggler nav-closeTCC"
-              type="button"
-              data-toggle="collapse"
-              data-target="#nav-menuTCC"
-              aria-controls="nav-menuTCC"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            ></NavClose>
+            <div className="d-flex justify-content-between align-items-center">
+              <NavPerfil>
+                <NavImage>
+                  <a href="/">
+                    <img src="images/ace.png" alt="" />
+                  </a>
+                </NavImage>
+              </NavPerfil>
 
-            <NavPerfil>
-              <NavImage>
-                <a href="/">
-                  <img src="images/ace.png" alt="" />
-                </a>
-              </NavImage>
-            </NavPerfil>
-
+              <div>
+                <NavClose
+                  className="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#nav-menuTCC"
+                  aria-controls="nav-menuTCC"
+                  aria-expanded="false"
+                  aria-label="Close navigation"
+                  onClick={closeMenu}
+                >
+                  <i className="bi bi-x-circle fs-4"></i>
+                </NavClose>
+              </div>
+            </div>
             <NavMenu>
               <NavList>
                 <NavItem>
-                  <NavLink href="quemsomos">Quem Somos</NavLink>
+                  <NavLink href="quemsomos" onClick={handleLinkClick}>
+                    Quem Somos
+                  </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="novidades">Novidades</NavLink>
+                  <NavLink href="novidades" onClick={handleLinkClick}>
+                    Novidades
+                  </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="propostas">Propostas</NavLink>
+                  <NavLink href="propostas" onClick={handleLinkClick}>
+                    Propostas
+                  </NavLink>
                 </NavItem>
               </NavList>
             </NavMenu>
