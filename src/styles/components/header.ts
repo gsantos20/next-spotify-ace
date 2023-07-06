@@ -187,6 +187,13 @@ export const NavLink = styled.a`
   border-radius: 0.25rem;
   color: white !important;
 `
+export const NavSocialMenu = styled.div`
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+`
 
 export const NavSocial = styled.a`
   font-size: 1.4rem;

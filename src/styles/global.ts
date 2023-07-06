@@ -35,6 +35,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    margin: 0;
+  }
+
   body {
     /* margin: var(--headerTOPMENU-height) 0 0 0; */
     font-family: var(--body-font);
@@ -44,7 +48,11 @@ export default createGlobalStyle`
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    background-color: black
+  }
+
+  #__next {
+    position: absolute;
+    inset: 0;
   }
 
   ul {
