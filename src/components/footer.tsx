@@ -9,7 +9,7 @@ import {
 
 const Footer: React.FC = (props: FooterProps) => {
   return (
-    <div>
+    <>
       <GlobalFooterStyle />
       <TagFooter>
         <div className="row p-2 ds-flex w-100 h-100 justify-content-center align-items-center">
@@ -25,7 +25,7 @@ const Footer: React.FC = (props: FooterProps) => {
           </div>
         </div>
       </TagFooter>
-    </div>
+    </>
   )
 }
 

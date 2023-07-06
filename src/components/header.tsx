@@ -16,7 +16,8 @@ import {
   IconX,
   NavClose,
   NavList,
-  NavToggle
+  NavToggle,
+  NavSocialMenu
 } from '../styles/components/header'
 
 const Header: React.FC = (props: HeaderProps) => {
@@ -40,7 +41,7 @@ const Header: React.FC = (props: HeaderProps) => {
   }
 
   return (
-    <div>
+    <>
       <GlobalHeaderStyle />
       <TagHeader>
         <NavToggle
@@ -101,7 +102,7 @@ const Header: React.FC = (props: HeaderProps) => {
               </NavList>
             </NavMenu>
 
-            <div className="pt-0 p-3">
+            <NavSocialMenu>
               <NavSocial
                 href="https://www.instagram.com/chapa.a.c.e/"
                 target="_blank"
@@ -123,7 +124,7 @@ const Header: React.FC = (props: HeaderProps) => {
               >
                 <i className="bi bi-file-music-fill"></i>
               </NavSocial>
-            </div>
+            </NavSocialMenu>
           </NavContent>
 
           <IconX className="row" id="iconX">
@@ -131,7 +132,7 @@ const Header: React.FC = (props: HeaderProps) => {
           </IconX>
         </Nav>
       </TagHeader>
-    </div>
+    </>
   )
 }
 
