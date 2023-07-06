@@ -27,7 +27,7 @@ export const FooterLink = styled.a`
   -moz-transition: font-size 0.6s ease;
   -o-transition: font-size 0.6 ease;
   transition: font-size 0.6 ease;
-  color: lightgrey;
+  color: gray;
   text-decoration: none;
 
   &:hover {

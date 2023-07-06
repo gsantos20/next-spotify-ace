@@ -46,6 +46,7 @@ export default class MyDocument extends Document {
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
             rel="stylesheet"
@@ -56,10 +57,6 @@ export default class MyDocument extends Document {
             integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
             crossOrigin="anonymous"
           />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          ></meta>
         </Head>
         <body>
           <Main />

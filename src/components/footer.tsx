@@ -18,9 +18,17 @@ const Footer: React.FC = (props: FooterProps) => {
           </div>
           <div className="col-6 fs-6 text-center">
             <b>
-              DEVELOPED WITH ❤ BY
-              <FooterLink href="index">AceTeam</FooterLink>
-              <i className="black bi bi-suit-spade-fill"></i>
+              DEVELOPED WITH
+              <i className="text-danger bi bi-suit-heart-fill"> </i>
+              BY&nbsp;
+              <FooterLink
+                href="https://www.instagram.com/guuztta"
+                target="_blank"
+              >
+                visk
+              </FooterLink>
+              &nbsp;
+              <i className="text-black bi bi-suit-spade-fill"></i>
             </b>
           </div>
         </div>

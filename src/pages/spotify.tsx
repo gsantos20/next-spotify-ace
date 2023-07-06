@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { KeyboardEvent } from 'react'
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -29,10 +29,11 @@ const Spotify: React.FC = () => {
                       className="form-control form-control-lg form-control-borderless"
                       id="searchBar"
                       type="search"
+                      onKeyUp={handleKey}
                     />
-                    <label className="btn btn-success m-1" id="searchBtn">
+                    <button className="btn btn-success m-1" id="searchBtn">
                       <i className="fa fa-search"></i>
-                    </label>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -52,6 +53,12 @@ const Spotify: React.FC = () => {
       <Footer></Footer>
     </>
   )
+
+  function handleKey(e: KeyboardEvent) {
+    if (e.which === 13) {
+    }
+    // getList();
+  }
 }
 
 export default Spotify
