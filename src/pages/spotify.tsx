@@ -26,7 +26,7 @@ const Spotify: React.FC = () => {
                 <div className="card-body row align-items-center">
                   <div className="col-md-12 d-flex">
                     <input
-                      className="form-control form-control-lg form-control-borderless"
+                      className="form-control form-control-lg border-0"
                       id="searchBar"
                       type="search"
                       onKeyUp={handleKey}
