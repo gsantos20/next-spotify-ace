@@ -1,5 +1,4 @@
 import React, { KeyboardEvent } from 'react'
-import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { GlobalSpotifyStyle } from '../styles/pages/spotify'
@@ -8,15 +7,7 @@ const Spotify: React.FC = () => {
   return (
     <>
       <GlobalSpotifyStyle />
-      <Head>
-        <title>Spotify Ace</title>
-        <link
-          rel="shortcut icon"
-          href="images/spotify.png"
-          type="image/x-icon"
-        />
-      </Head>
-      <Header></Header>
+      <Header/>
 
       <main>
         <div className="container">
